@@ -2,40 +2,40 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: @tertiary-color;
-    color: @secondary-color;
+    background-color: @primary-color-super-dark;
+    color: @primary-text-color;
     font-size: 1rem;
-    padding: 0.25rem 0.5rem;
+    padding: 0.5rem 1rem;
     flex-direction: column;
-    position: sticky;
-    top: 0px;
-    left: 0px;
-    z-index: 900;
-    margin-bottom: 10px;
-    
+    font-family: @primary-font;
+
     @media (min-width: #breaks[tablet]) {
         flex-direction: row;
     }
 
-    div {
+    .logo-container {
         display: flex;
         align-items: center;
 
-        h1 {
-            margin: 0px;
-            padding: 0.25rem 0.5rem;
-            font-size: 1.2rem;
-            font-family: @primary-font;
+        h1.logo {
+            margin: 0;
+            padding: 0.5rem;
+            font-size: 2rem;
+            font-weight: bold;
+
+            span {
+                color: @primary-color;  // Puedes cambiar este color si quieres destacar la letra "K"
+                font-size: 2.2rem;
+            }
         }
     }
 
     nav {
-        margin-right: 0rem;
         width: 100%;
 
         @media (min-width: #breaks[tablet]) {
-            margin-right: 1rem;
             flex: 1;
+            width: auto;
         }
 
         ul {
@@ -47,14 +47,13 @@ header {
 
             @media (min-width: #breaks[tablet]) {
                 flex-direction: row;
-                justify-content: end;
+                justify-content: flex-end;
             }
 
             li {
                 border-bottom: 1px solid @primary-color-dark;
 
                 @media (min-width: #breaks[tablet]) {
-                    width: auto;
                     border-bottom: none;
                 }
 
@@ -63,31 +62,19 @@ header {
                     padding: 0.75rem 1rem;
                     color: @secondary-color;
                     text-decoration: none;
-                    font-family: @primary-font;
+                    width: 100%;
+
+                    @media (min-width: #breaks[tablet]) {
+                        display: inline-block;
+                    }
 
                     &:hover {
                         text-decoration: underline;
                         background-color: @primary-color-light;
                         color: @secondary-text-color;
                     }
-
-                    width: 100%;
-
-                    @media (min-width: #breaks[tablet]) {
-                        display: inline-block;
-                    }
                 }
             }
         }
     }
-}
-
-.logo {
-    font-size: 2.3rem;
-    color: @secondary-color;
-    cursor: pointer;
-}
-
-.logo span {
-    color: @primary-color;
 }
