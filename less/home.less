@@ -1,9 +1,9 @@
-.m-center {
+.m-center() {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
+  
 main {
     margin: 0;
     padding: 0;
@@ -12,7 +12,7 @@ main {
     .m-center();
     margin-bottom: 3rem;
 }
-
+  
 .inicio {
     display: flex;
     flex-direction: row;
@@ -20,209 +20,213 @@ main {
     align-items: center;
     padding: 4rem 2rem;
     gap: 2rem;
-
+  
     img {
-        width: 100%;
-        max-width: 600px; 
-        object-fit: cover; 
-        border-radius: 8px; 
+      width: 100%;
+      max-width: 600px;
+      object-fit: cover;
+      border-radius: 8px;
     }
-
+  
     .contenido {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 1rem;
-        max-width: 600px; 
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 1rem;
+      max-width: 600px;
     }
-
+  
     h2 {
-        font-size: 2.8rem;
-        color: @secondary-color;
-        font-family: @primary-font;
-        span {
-            color: @primary-color-light;
-        }
+      font-size: 2.8rem;
+      color: @secondary-color;
+      font-family: @primary-font;
+  
+      span {
+        color: @primary-color-light;
+      }
     }
-
+  
     p {
-        font-size: 1.5rem;
-        color: @secondary-color-dark;
-        font-family: @secondary-font;
+      font-size: 1.5rem;
+      color: @secondary-color-dark;
+      font-family: @secondary-font;
     }
-
+  
     .botones {
-        display: flex;
-        gap: 1rem;
-
-        a {
-            padding: 0.8rem 3rem;
-            background-color: @primary-color;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-            font-family: @primary-font;
-            &:hover {
-                background-color: @primary-color-dark;
-            }
+      display: flex;
+      gap: 1rem;
+  
+      a {
+        padding: 0.8rem 3rem;
+        background-color: @primary-color;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        font-family: @primary-font;
+  
+        &:hover {
+          background-color: @primary-color-dark;
         }
+      }
     }
-
+  
     @media (max-width: #breaks[tablet]) {
-        flex-direction: column; 
-
-        img {
-            max-width: 100%; 
+      flex-direction: column;
+  
+      img {
+        max-width: 100%;
+      }
+  
+      .contenido {
+        align-items: center;
+      }
+  
+      .botones {
+        a {
+          padding: 0.5rem 2rem;
         }
-
-        .contenido {
-            align-items: center; 
-        }
-
-        .botones {
-            a {
-                padding: 0.5rem 2rem;
-            }
-        }
+      }
     }
 }
-
+  
 .contacto {
     padding: 4rem 2rem;
     background-color: @secondary-color;
-    width: 100%; 
-    margin-top: 0; 
-
+    width: 100%;
+    margin-top: 0;
+  
     h1 {
-        font-size: 2.5rem;
-        color: @primary-color;
-        text-align: center;
-        font-weight: bold;
+      font-size: 2.5rem;
+      color: @primary-color;
+      text-align: center;
+      font-weight: bold;
     }
-
+  
     .container_contacto {
-        display: flex;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+      margin-top: 30px;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+
+      @media (max-width: #breaks[tablet]) {
         flex-direction: column;
-        gap: 30px;
-        align-items: center;
-        margin-top: 30px;
-        width: 100%; 
-        max-width: 1200px; 
-        margin: 0 auto; 
-
-        @media (min-width: #breaks[desktop]) {
-            flex-direction: row;
-            justify-content: space-between; 
-        }
-
-        @media (min-width: #breaks[wide]) {
-            max-width: 1400px; 
-        }
+        gap: 20px;
+      }
+  
+      @media (min-width: #breaks[desktop]) {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+  
+      @media (min-width: #breaks[wide]) {
+        max-width: 1400px;
+      }
     }
-
+  
     .info_contacto {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        margin-bottom: 20px;
-        order: -1;
-
-        i {
-            font-size: 2rem;
-            color: @variante-color;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+      order: -1;
+  
+      i {
+        font-size: 2rem;
+        color: @variante-color;
+      }
+  
+      .datos_contacto {
+        h3 {
+          font-size: 1.25rem;
+          font-weight: bold;
+          color: @tertiary-color;
         }
-
-        .datos_contacto {
-            h3 {
-                font-size: 1.25rem;
-                font-weight: bold;
-                color: @tertiary-color;
-            }
-
-            span {
-                font-size: 1rem;
-                color: @secondary-text-color;
-            }
+  
+        span {
+          font-size: 1rem;
+          color: @secondary-text-color;
         }
+      }
     }
-
+  
     .formularioCont {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 800px;
+      width: 90%;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: @tertiary-color;
+      border-radius: 10px;
+  
+      .form-group {
         display: flex;
         flex-direction: column;
         gap: 20px;
-        max-width: 800px;
-        width: 90%;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: @tertiary-color;
-        border-radius: 10px;
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            font-family: @secondary-font;
-            .input-control {
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-
-                label {
-                    font-size: 1rem;
-                    color: @secondary-color-dark;
-                }
-
-                input, textarea {
-                    padding: 10px;
-                    border: 1px solid @secondary-color-dark;
-                    border-radius: 5px;
-                    font-size: 1rem;
-                    width: 100%;
-                }
-
-                .error {
-                    color: @error-color;
-                    font-size: 0.875rem;
-                }
-            }
-        }
-
-        .submit-button {
-            padding: 12px 20px;
-            background-color: @primary-color;
-            color: white;
+        font-family: @secondary-font;
+  
+        .input-control {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+  
+          label {
             font-size: 1rem;
-            font-weight: bold;
-            border: none;
+            color: @secondary-color-dark;
+          }
+  
+          input,
+          textarea {
+            padding: 10px;
+            border: 1px solid @secondary-color-dark;
             border-radius: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-
-            &:hover {
-                background-color: darken(@primary-color, 10%);
-            }
-
-            i {
-                font-size: 1.2rem;
-            }
+            font-size: 1rem;
+            width: 100%;
+          }
+  
+          .error {
+            color: @error-color;
+            font-size: 0.875rem;
+          }
         }
+      }
+  
+      .submit-button {
+        padding: 12px 20px;
+        background-color: @primary-color;
+        color: white;
+        font-size: 1rem;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+  
+        &:hover {
+          background-color: darken(@primary-color, 10%);
+        }
+  
+        i {
+          font-size: 1.2rem;
+        }
+      }
     }
+
+    @media (max-width: #breaks[tablet]) {
+        padding: 2rem 1rem;
+    }    
 }
+  
 
-
-@media (max-width: #breaks[tablet]) {
-    .contacto {
-        padding: 2rem 1rem; 
-    }
-
-    .container_contacto {
-        flex-direction: column; 
-        gap: 20px;
-    }
-}
+  
